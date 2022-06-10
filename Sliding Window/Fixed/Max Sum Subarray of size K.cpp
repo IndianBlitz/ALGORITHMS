@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int MaxSumSubarray(int k,int arr_size,vector<int>arr){
+int MinSumSubarray(int k,int arr_size,vector<int>arr){
         int i=0,j=0,sum=0,ans=0;
 
         while(j<arr_size){
@@ -27,6 +27,9 @@ int MaxSumSubarray(int k,int arr_size,vector<int>arr){
 }
 
 
+
+
+
 int main() {
     vector<int>arr;
     int arr_size,k;
@@ -40,8 +43,19 @@ int main() {
         arr.push_back(inputs);
     }
 
-    int val = MaxSumSubarray(k,arr_size,arr);
-    cout<<val<<endl;
+    if(arr_size<k){
+        cout<<"invalid inputs"<<endl;
+    }
+    else{
+        int val = MaxSumSubarray(k,arr_size,arr);
+        cout<<val<<endl;
+
+    }
+
+    
+
+
+
 
 
 }                
