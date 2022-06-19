@@ -7,15 +7,15 @@ using namespace std;
 
 void swap_array (vector<int>&v,int i,int j){
     if(i>=j){
-         cout<<i<<" "<<j<<endl;
+//          cout<<i<<" "<<j<<endl;
         return;
     }
 
     
 
-    sp(v,i+1,j-1);
+    swap_array(v,i+1,j-1);
     swap(v[i],v[j]);
-    cout<<i<<" "<<j<<endl;
+//     cout<<i<<" "<<j<<endl;
 
 }
 
