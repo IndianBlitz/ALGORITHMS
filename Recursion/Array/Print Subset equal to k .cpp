@@ -16,12 +16,16 @@ void subarray(vector<int> v,int index,int len,vector<int> &ds,int k,int sum){
         return;
     }
 
+    //picking 
     ds.push_back(v[index]);
     sum+=v[index];
     subarray(v,index+1,len,ds,k,sum);
 
+    // when returing or going to not picking condtion remove them as they will not be included in not picking condition
     sum-=v[index];
     ds.pop_back();
+    
+    //not picking
     subarray(v,index+1,len,ds,k,sum);
 
 
